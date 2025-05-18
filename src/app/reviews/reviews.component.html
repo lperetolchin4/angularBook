@@ -1,0 +1,15 @@
+<div class="reviews-container">
+    <h2>Рецензии</h2>
+    
+    <div *ngFor="let review of reviews" class="review">
+      <p><strong>{{ review.author }}</strong> ({{ review.date | date: 'dd.MM.yyyy' }})</p>
+      <p>{{ review.text }}</p>
+    </div>
+  
+    <div class="add-review">
+      <h3>Добавить рецензию</h3>
+      <input [(ngModel)]="newReview.author" placeholder="Ваше имя">
+      <textarea [(ngModel)]="newReview.text" placeholder="Ваш отзыв"></textarea>
+      <button (click)="submitReview()">Отправить</button>
+    </div>
+  </div>

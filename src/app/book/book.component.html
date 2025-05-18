@@ -1,0 +1,16 @@
+<div class="book-container">
+    <!-- Пример правильного использования -->
+<h1>{{ book?.title | uppercase }}</h1>
+<img [src]="book?.cover" alt="Обложка книги">
+    
+    <div class="book-details">
+      <p><strong>Автор:</strong> {{ book.author }}</p>
+      <img [src]="book.authorPhoto" alt="Фото автора" class="author-photo">
+      
+      <p><strong>Год издания:</strong> {{ book.year | date: 'yyyy' }}</p>
+      <p><strong>Страниц:</strong> {{ book.pages }}</p>
+      <p><strong>Издательство:</strong> {{ book.publisher }}</p>
+    </div>
+  
+    <app-reviews></app-reviews>
+  </div>
